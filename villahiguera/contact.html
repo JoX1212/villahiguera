@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Villa Higuera — Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Villa Higuera</a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container contact-wrap">
+      <div class="contact-text">
+        <h1 class="section-title">Contact Us</h1>
+        <p><a href="mailto:ercajo@hotmail.com">ercajo@hotmail.com</a><br>
+           <a href="tel:+32475605370">+32 475 60 53 70</a></p>
+
+        <div class="btn-row">
+          <a class="btn" href="gallery.html">See gallery</a>
+          <a class="btn ghost" href="index.html">Back home</a>
+        </div>
+      </div>
+
+      <img class="contact-img" src="images/contact.jpg" alt="Andalusian landscape" loading="lazy">
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="y"></span> Villa Higuera</div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>

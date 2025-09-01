@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Villa Higuera — Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Villa Higuera</a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Gallery</h1>
+      <div class="grid">
+        <!-- Replace with your images; add as many as you like -->
+        <a href="images/01.jpg"><img src="images/01.jpg" alt="Villa view 1" loading="lazy"></a>
+        <a href="images/02.jpg"><img src="images/02.jpg" alt="Villa view 2" loading="lazy"></a>
+        <a href="images/03.jpg"><img src="images/03.jpg" alt="Villa view 3" loading="lazy"></a>
+        <a href="images/04.jpg"><img src="images/04.jpg" alt="Villa view 4" loading="lazy"></a>
+        <a href="images/05.jpg"><img src="images/05.jpg" alt="Villa view 5" loading="lazy"></a>
+        <a href="images/06.jpg"><img src="images/06.jpg" alt="Villa view 6" loading="lazy"></a>
+      </div>
+
+      <div class="cta-centre">
+        <a class="btn" href="contact.html">Book / Contact</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="y"></span> Villa Higuera</div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>

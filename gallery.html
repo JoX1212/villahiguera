@@ -7,6 +7,22 @@
   <link rel="stylesheet" href="styles.css">
   <meta name="description" content="Photo gallery of Villa Higuera. Exteriors, living spaces, bedrooms, and bathrooms.">
 </head>
+  <script>
+document.querySelectorAll('img').forEach(img => {
+  const tries = ['jpg','jpeg','JPG','JPEG','png','PNG'];
+  img.addEventListener('error', function onErr() {
+    const url = new URL(img.src, window.location.href);
+    const base = url.pathname.replace(/\.[^.]+$/, '');
+    const tried = img.dataset.tried ? img.dataset.tried.split(',') : [];
+    const next = tries.find(ext => !tried.includes(ext));
+    if (!next) { img.removeEventListener('error', onErr); return; }
+    tried.push(next);
+    img.dataset.tried = tried.join(',');
+    img.src = `${base}.${next}` + (url.search || '');
+  }, { once:false });
+});
+</script>
+
 <body>
   <header class="site-header">
     <div class="container">
@@ -75,4 +91,5 @@
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
 
